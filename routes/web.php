@@ -28,12 +28,12 @@ Route::get('/articles/{id}', function ($id) {
 });
 **/
 
-/* 02_praktikum_web_lanjut_dua */   
+/* 02_praktikum_web_lanjut_dua    
 
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/about', [AboutController::class, 'about']);
 Route::get('/articles/{id}', [ArticleController::class, 'articles']);
 
-
+*/
 
 
