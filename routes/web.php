@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 /* 02_praktikum_web_lanjut_satu 
+
 Route::get('/about', function () {
     return '1941720180 - ILHAM IBRAHIM';
 });
@@ -28,12 +29,34 @@ Route::get('/articles/{id}', function ($id) {
 });
 **/
 
-/* 02_praktikum_web_lanjut_dua    
+/* 02_praktikum_web_lanjut_dua 
 
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/about', [AboutController::class, 'about']);
 Route::get('/articles/{id}', [ArticleController::class, 'articles']);
 
-*/
+ */  
 
+/* 02_praktikum_web_lanjut_tiga   
 
+Route::get('/home', [Praktikum3::class, 'index']);
+
+Route::prefix('/Products')->group(function () {
+    Route::get('/edugame', [Praktikum3::class, 'edugame']);
+    Route::get('/friendkids', [Praktikum3::class, 'friendkids']);
+    Route::get('/storybooks', [Praktikum3::class, 'storybooks']);
+    Route::get('/kidsongs', [Praktikum3::class, 'kidsongs']);
+   });
+
+   Route::get('/berita/{isi}', [Praktikum3::class, 'berita']);
+
+   Route::prefix('/Program')->group(function () {
+    Route::get('/karir', [Praktikum3::class, 'karir']);
+    Route::get('/magang', [Praktikum3::class, 'magang']);
+    Route::get('/industri', [Praktikum3::class, 'industri']);
+   });
+
+   Route::get('/about', [Praktikum3::class, 'about']);
+   Route::resource('kontak', kontakController::class);
+
+   */
